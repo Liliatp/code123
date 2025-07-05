@@ -29,16 +29,27 @@
     将工作区内容添加到暂存区：git add . !!文件目录右边的字母变成A M表示提交到暂存区后又更改(暂存区修改后不会形成本次的历史版本)
     将暂存区的内容形成历史版本：git commit -m '简要说明' !!目录变回正常样式 A消失但是M还在
     查看历史版本：git log 
-         
-    
-    
+    回退历史版本：git reset --hard 版本id（！！历史版本里commit后面的一串字符）
+    git的忽略文件：一个没有名字，只有.gitignore后缀的文件
+                  如果某些文件不需要被git管理就可以写到这个文件里，如node_modules
+    git的远程操作：
+    前提：需要先有一个github远程账号
+    1.一个本地仓库的首次上传
+      新建一个远程仓库，然后拿到https地址 !!!执行三行提示指令
+      把本地仓库和远程仓库关联：git remote add 变量 远程地址 !!git remote add origin https...
+      把本地仓库内容上传到远程：git push -u 地址变量名 分支名称 
+      注意：一台电脑的首次上传需要输入用户名和密码
+      ！！上传之后刷新github
+    2.该本地仓库的第二次上传
 */
-
+import './app.css'
 function App() {
   return (
     <div className="App">
      {/* 初始化 */}
      this is app
+     {/* ！！！第二次上传 */}
+     <div className="box1"></div>
     </div>
   );
 }
