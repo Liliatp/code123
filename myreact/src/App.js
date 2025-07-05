@@ -32,15 +32,22 @@
     回退历史版本：git reset --hard 版本id（！！历史版本里commit后面的一串字符）
     git的忽略文件：一个没有名字，只有.gitignore后缀的文件
                   如果某些文件不需要被git管理就可以写到这个文件里，如node_modules
-    git的远程操作：
+ =================================================================
+git的远程操作：
     前提：需要先有一个github远程账号
     1.一个本地仓库的首次上传
       新建一个远程仓库，然后拿到https地址 !!!执行三行提示指令
       把本地仓库和远程仓库关联：git remote add 变量 远程地址 !!git remote add origin https...
-      把本地仓库内容上传到远程：git push -u 地址变量名 分支名称 
+      把本地仓库内容上传到远程：git push -u 地址变量名 分支名称 ，-u表示记住本次上传的远程地址
       注意：一台电脑的首次上传需要输入用户名和密码
       ！！上传之后刷新github
-    2.该本地仓库的第二次上传
+    2.该本地仓库的第二次上传远程
+      git push
+      git push 分支名称            !!!git commit -m 'addcss'
+    从远程拉取代码：
+    第一次拉去远程仓库地址：git clone 远程仓库地址
+    后续拉去远程仓库地址：git pull
+
 */
 import './app.css'
 function App() {
